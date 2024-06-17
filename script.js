@@ -84,3 +84,20 @@ lowers.forEach(lower => {
             }
         }, { offsetX: Number.NEGATIVE_INFINITY }).element    
     };
+
+    let goog = 0
+
+var loadFile = function(event) {
+	var image = document.getElementById(goog);
+    console.log(goog)
+	image.src = URL.createObjectURL(event.target.files[0]);
+    goog++
+    console.log('new goog:',goog)
+    img1 = 'id="1"';
+    img2 = 'class="draggable, low"';
+    img3 = 'draggable="true"';
+    let parentElement = document.getElementById("containerLower");
+    let theFirstChild = parentElement.lastChild;
+    let newElement = document.createElement("img");
+    parentElement.insertBefore(newElement, theFirstChild);
+};
